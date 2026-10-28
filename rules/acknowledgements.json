@@ -1,0 +1,409 @@
+[
+ {
+  "id": "easylist",
+  "name": "EasyList",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easylist.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "antiadblock",
+  "name": "Adblock Warning Removal List",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "ko",
+  "name": "YousList",
+  "authors": "The YousList authors (https://github.com/yous/YousList)",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceURL": "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "de",
+  "name": "EasyList Germany",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylistgermany/easylistgermany.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "fr",
+  "name": "Liste FR",
+  "authors": "The Liste FR authors (https://github.com/easylist/listefr)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "es",
+  "name": "EasyList Spanish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "pt",
+  "name": "EasyList Portuguese",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "it",
+  "name": "EasyList Italy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "pl",
+  "name": "EasyList Polish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "nl",
+  "name": "EasyList Dutch",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "zh",
+  "name": "EasyList China",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "id",
+  "name": "ABPindo",
+  "authors": "The ABPindo authors",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "vi",
+  "name": "hostsVN",
+  "authors": "BigDargon",
+  "license": "MIT",
+  "licenseURL": "https://github.com/bigdargon/hostsVN/blob/master/LICENSE",
+  "sourceURL": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/filters/adservers.txt",
+  "blocker": "ads",
+  "notice": "Copyright (c) 2026 BigDargon. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+ },
+ {
+  "id": "easyprivacy",
+  "name": "EasyPrivacy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easyprivacy.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "cookies",
+  "name": "EasyList Cookie List",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "social",
+  "name": "Fanboy's Social Blocking List",
+  "authors": "Fanboy and the EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-social.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "annoyance",
+  "name": "Fanboy's Annoyance List",
+  "authors": "Fanboy and the EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+  "blocker": "ads"
+ },
+ {
+  "id": "easylist",
+  "name": "EasyList",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easylist.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "antiadblock",
+  "name": "Adblock Warning Removal List",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "ko",
+  "name": "YousList",
+  "authors": "The YousList authors (https://github.com/yous/YousList)",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceURL": "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "de",
+  "name": "EasyList Germany",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylistgermany/easylistgermany.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "fr",
+  "name": "Liste FR",
+  "authors": "The Liste FR authors (https://github.com/easylist/listefr)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "es",
+  "name": "EasyList Spanish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "pt",
+  "name": "EasyList Portuguese",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "it",
+  "name": "EasyList Italy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "pl",
+  "name": "EasyList Polish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "zh",
+  "name": "EasyList China",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "id",
+  "name": "ABPindo",
+  "authors": "The ABPindo authors",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "easyprivacy",
+  "name": "EasyPrivacy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easyprivacy.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "cookies",
+  "name": "EasyList Cookie List",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "social",
+  "name": "Fanboy's Social Blocking List",
+  "authors": "Fanboy and the EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-social.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "annoyance",
+  "name": "Fanboy's Annoyance List",
+  "authors": "Fanboy and the EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+  "blocker": "privacy"
+ },
+ {
+  "id": "easylist",
+  "name": "EasyList",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easylist.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "de",
+  "name": "EasyList Germany",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylistgermany/easylistgermany.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "fr",
+  "name": "Liste FR",
+  "authors": "The Liste FR authors (https://github.com/easylist/listefr)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "es",
+  "name": "EasyList Spanish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "pt",
+  "name": "EasyList Portuguese",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "it",
+  "name": "EasyList Italy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "pl",
+  "name": "EasyList Polish",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "nl",
+  "name": "EasyList Dutch",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "zh",
+  "name": "EasyList China",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "id",
+  "name": "ABPindo",
+  "authors": "The ABPindo authors",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "vi",
+  "name": "hostsVN",
+  "authors": "BigDargon",
+  "license": "MIT",
+  "licenseURL": "https://github.com/bigdargon/hostsVN/blob/master/LICENSE",
+  "sourceURL": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/filters/adservers.txt",
+  "blocker": "shield",
+  "notice": "Copyright (c) 2026 BigDargon. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+ },
+ {
+  "id": "easyprivacy",
+  "name": "EasyPrivacy",
+  "authors": "The EasyList authors (https://easylist.to/)",
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceURL": "https://easylist.to/easylist/easyprivacy.txt",
+  "blocker": "shield"
+ },
+ {
+  "id": "annoyance",
+  "name": "Fanboy's Annoyance List",
+  "authors": "Fanboy and the EasyList authors (https://easylist.to/)",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceURL": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+  "blocker": "shield"
+ }
+]
