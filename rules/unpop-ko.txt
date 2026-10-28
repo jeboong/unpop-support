@@ -1,0 +1,148 @@
+[Adblock Plus 2.0]
+! Title: Unpop Korean ad rules
+! Version: 20261029
+! Last modified: 2026-10-29
+! Homepage: https://jeboong.github.io/unpop-support/licenses.html
+! License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+!
+! Unpop's own work. Copyright (c) 2026 the Unpop authors. Licensed under the Creative Commons
+! Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0), so it ships inside the
+! CC BY-SA 4.0 compiled rule files (Tools/filters/LICENSES.md).
+!
+! Clean room: every rule below was written from Unpop's own observation of live Korean mobile
+! sites (requests WebKit sent, response types, and the page markup the request ended up in),
+! loaded with an iPhone user agent in macOS WebKit on 2026-10-29. No rule was taken from, or
+! checked against, List-KR, AdGuard or any other GPL filter list. Each group names the evidence.
+!
+! Policy: block the ad call, ad SDK or ad-only tracker, by host when every request observed on
+! that host was ad delivery, otherwise by path. Never a content or image CDN wholesale
+! (ssl.pstatic.net, *.daumcdn.net, *.kakaocdn.net serve real pages too; only their ad paths are
+! listed). Ads that Naver's own search results render inline (Power Link, shopping ads) are not
+! touched. Ad-click and ad-event hosts that a tapped ad link may pass through are blocked only as
+! subresources ($~document), so a link the user chooses to open still works.
+
+! ---------------------------------------------------------------------------------------------
+! Naver display ad platform (GFP). Serves the display and native ads on Naver's own pages and,
+! as an ad network, on Daum, DC Inside, Ppomppu, Clien and other publishers.
+!
+! nam.veta.naver.com: the ad call. /gfp/v1?u=<ad unit>&xdid=<slot> (JSON ad response, e.g.
+! u=m_naver_home_feed_1st, u=m_news, u=m_blog_head, u=p_member_login with xdid=log.banner,
+! u=MW_DAUM_tab_news_list_1_DA_Naver-..., u=m_dcinside_unit_4-..., u=m_web_clien_ch4) and
+! /nac/1, /nac/2 (ad cookie sync, JSON). Seen on m.naver.com, n.news.naver.com,
+! m.blog.naver.com, nid.naver.com, m.daum.net, v.daum.net, m.dcinside.com, m.ppomppu.co.kr,
+! m.clien.net. Nothing else was served from this host.
+||nam.veta.naver.com^
+! siape.veta.naver.com: ad impression and win notices (/openrtb/nbimp, /openrtb/nbackimp,
+! /openrtb/nurl) and an ad fetch (/fxshow?su=...&mdom=...east_panel_ad). Same pages.
+||siape.veta.naver.com^
+! ssl.pstatic.net/tveta/ and /melona/: the ad SDK and its creatives - tveta/libs/glad/prod/
+! gfp-core.js, gfp-display-sdk.js, gfp-display-safeframe.js, gfp-display-nda.js,
+! tveta/libs/native_visual/* (native ad renderers), melona/libs/gfp-nac-module/synchronizer.js,
+! melona/libs/glad_admute/, melona/libs/assets/css/gfa/ (ad banner CSS) and
+! melona/libs/<campaign>/<id>.png (the advertiser logo in m.naver.com's nav bar,
+! div.nav_ad_wrap > img.MM_NAV_AD_LOGO). The rest of ssl.pstatic.net is Naver's static content.
+||ssl.pstatic.net/tveta/
+||ssl.pstatic.net/melona/
+! t.naverads.com: viewability beacons (/sc2/1/, /sc2/11/, /sc2/12/) sent next to Naver ads on
+! m.daum.net, v.daum.net and m.dcinside.com.
+||t.naverads.com^
+! ader.naver.com: ad event beacons, /collection/gfa/<token> (GFA ad events) and
+! /v1/<token>?...&yCoordinateInPixels=...&adsAreaHeight=... (ad-area viewability on Naver
+! search). Subresources only: ad links can pass through this host.
+||ader.naver.com^$~document
+! m.naver.com/panels/SHOWCASE-AD.shtml: the home page's full-screen "쇼케이스 광고" (showcase
+! ad) panel, an empty ad iframe that the ad SDK fills.
+||m.naver.com/panels/SHOWCASE-AD.shtml
+
+! Naver blog ads. camp-api.naver.com/v1/bulk?...&units=m_blog_body,...,m_blog_bottom_banner
+! answers {"ads": {"m_blog_body": [...], ...}} plus its tracking URLs on camp-report.naver.com
+! (/v2/a ack, /v2/n nofill, /v2/re render, /v2/i imp, /v2/c click, /v2/v and /v2/vp video).
+! Seen on m.blog.naver.com posts.
+||camp-api.naver.com/v1/bulk
+||camp-report.naver.com^$~document
+
+! Naver search ads syndicated to other sites ("파워링크" boxes). external-api.impression-neo.
+! naver.com/api/v2/ads/search-jsonp?channel=m_clien.ch1 / m_ppomppu.ch8 / ... returns the ads;
+! ssl.pstatic.net/adimg3.search/adpost/ is the AdPost publisher script that shows them
+! (adpost_show_ads_v2.min.js, js/ad.js). Seen on m.clien.net, m.fmkorea.com, m.ppomppu.co.kr.
+||external-api.impression-neo.naver.com/api/v2/ads/
+||ssl.pstatic.net/adimg3.search/adpost/
+
+! ---------------------------------------------------------------------------------------------
+! Kakao AdFit and Daum's ad API.
+!
+! t1.kakaocdn.net/kas/ and t1.daumcdn.net/kas/: the AdFit web SDK and its frames -
+! kas/static/ba.min.js, kas/static/na.min.js (native ads, from t1.daumcdn.net on v.daum.net),
+! kas/static/safeframe.html, kas/static/ads/custom_ads.js, kas/static/third-party/cookie/
+! ct2.html. Seen on m.daum.net, v.daum.net, m.dcinside.com. The rest of t1.kakaocdn.net and
+! t1.daumcdn.net (Kakao SDK, Daum page assets) stays.
+||t1.kakaocdn.net/kas/
+||t1.daumcdn.net/kas/
+! AdFit ad calls and trackers: serv.ds.kakao.com/sdk/banner?id=DAN-...&sdktype=web (JSON ad
+! response) and /sync/cookie, ka.ds.kakao.com/rimp/ and /vimp/ (impressions),
+! tr.ds.kakao.com/ssp/bimp (impression), act.ds.kakao.com/match (redirects to
+! analytics.ad.daum.net). Seen on m.daum.net, m.dcinside.com, m.inven.co.kr, m.ytn.co.kr,
+! mnews.sbs.co.kr. Nothing else was served from these hosts.
+||serv.ds.kakao.com^
+||ka.ds.kakao.com^
+||tr.ds.kakao.com^
+||act.ds.kakao.com^
+! kaat.daum.net/sdk/pp;...;sdk_version=4.41.4;...;has_ad_block=Y: the AdFit SDK's page beacon.
+||kaat.daum.net/sdk/
+! ads-api.daum.net: Daum's ad API - /api/v2/ads (native ads in the news lists on m.daum.net),
+! /api/v1/shopping/naver (the "AD 쇼핑 추천" box, <daum-ad-shopping>), /api/v1/sa/naver (the
+! Power Link block under v.daum.net articles, <daum-ad-sa>) and /api/v1/events (ad events).
+! Nothing else was served from this host.
+||ads-api.daum.net^
+
+! ---------------------------------------------------------------------------------------------
+! Ad networks on Korean news sites.
+!
+! www.joongang.co.kr: prebid.js builds ("/* prebid.js v9.49.1 ... admaruBidAdapter ..."),
+! the ADMARU news ad script and video ad player, an "ADSHARE" ad page in an iframe, and a hidden
+! 0x0 iframe (siteworks.kr/v2/apcos.php -> pixellogic.kr/v2/iframeH.php?dm=advibe.co.kr...)
+! that loads an affiliate page.
+||d2iyc2bes4ve1w.cloudfront.net/js/joongang_pb_kr.js
+||d33ggeo0s7nbfn.cloudfront.net/js/joongang_pb_us.js
+||d1s87id6169zda.cloudfront.net/js/joins_news_admaru.js
+||dnzedhceh7nim.cloudfront.net/acv/joongang/
+||adguru.kr/ad/
+||siteworks.kr/v2/apcos.php
+||pixellogic.kr/v2/iframeH.php
+! www.hani.co.kr: prebid build and ADMARU news ad script; send.mci1.co.kr/delivery/js/... and
+! /delivery/jsr/... ("AIIN_AD" loader) with /render/js/custom_jquery.js.
+||d1cykymlllue3h.cloudfront.net/js/hani_pb.js
+||d1cykymlllue3h.cloudfront.net/js/hani_news_admaru.js
+||send.mci1.co.kr/delivery/
+||send.mci1.co.kr/render/
+! m.ytn.co.kr: DMC Media ad tag (tsn.dmcmedia.co.kr/dmcadcdn/dmctag.js and dmctag.html),
+! Digital Camp SSP (ssp.digitalcamp.co.kr/com/?..., adimg.digitalcamp.co.kr/files/video/
+! postscribe.min.js), and the AEDI ad unit (api.aedi.ai/common/js/v1/aedi-ad.js, aedi-ad.css).
+||tsn.dmcmedia.co.kr/dmcadcdn/
+||ssp.digitalcamp.co.kr^
+||adimg.digitalcamp.co.kr^
+||api.aedi.ai/common/*/aedi-ad.
+
+! ---------------------------------------------------------------------------------------------
+! First-party ad loaders.
+!
+! Ppomppu: cdn3.ppomppu.co.kr/m/js/naver_power_ad.js (loads the syndicated Naver search ads)
+! and cdn4.ppomppu.co.kr/js/wtg_ads.js (loads the WTG ad stack), on list and post pages.
+||ppomppu.co.kr^*/naver_power_ad.js
+||ppomppu.co.kr^*/wtg_ads.js
+
+! ---------------------------------------------------------------------------------------------
+! Empty ad slots. Only boxes whose ad request is already blocked, so they would stay on the page
+! as blank space or a bare "AD" label.
+!
+! mnews.sbs.co.kr: div.w_bnr_ad (#news_enliple_byline_mobileweb), a 100px box holding
+! <iframe class="adframe" title="기사 하단 광고" src="//img.sbs.co.kr/news/ad/delay_redirect.html?
+! ...ADURL=//adservice.sbs.co.kr/NetInsight/..."> under each article; the frame is blocked.
+mnews.sbs.co.kr##.w_bnr_ad
+! m.ytn.co.kr: the "실시간 정보" box with an "AD" tag around a 200px <iframe
+! src="https://ad.smartinmedia.co.kr/cgi-bin/PelicanC.dll?impr?pageid=...&out=iframe">; the
+! frame is blocked, the box has no class or id of its own.
+m.ytn.co.kr##div:has(> iframe[src*="/cgi-bin/PelicanC.dll"])
+! m.fmkorea.com: <div class="pli" style="position:absolute">파워링크<span>광고</span></div>, the
+! label of the Power Link box, left floating over the page once the box itself is hidden.
+m.fmkorea.com##div.pli
