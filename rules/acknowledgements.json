@@ -271,6 +271,15 @@
   "blocker": "privacy"
  },
  {
+  "id": "unpop-compat",
+  "name": "Unpop compatibility exceptions",
+  "authors": "The Unpop authors",
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sourceURL": "https://jeboong.github.io/unpop-support/rules/unpop-compat.txt",
+  "blocker": "privacy"
+ },
+ {
   "id": "cookies",
   "name": "EasyList Cookie List",
   "authors": "The EasyList authors (https://easylist.to/)",

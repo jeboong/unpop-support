@@ -1,0 +1,43 @@
+[Adblock Plus 2.0]
+! Title: Unpop compatibility exceptions
+! Version: 20261029
+! Last modified: 2026-10-29
+! Homepage: https://jeboong.github.io/unpop-support/licenses.html
+! License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+!
+! Unpop's own work. Copyright (c) 2026 the Unpop authors. Licensed under the Creative Commons
+! Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0), so it ships inside the
+! CC BY-SA 4.0 compiled rule files (Tools/filters/LICENSES.md).
+!
+! Narrow exceptions for pages that a shipped rule breaks. Each one lets through only the request
+! a page needs to keep working and leaves the rule that caught it in place for everything else.
+! Every group names the rule it answers, the evidence, and what stays blocked.
+
+! ---------------------------------------------------------------------------------------------
+! Kernel Video Sharing (KVS) player, kt_player.js (Unpop Privacy).
+!
+! KVS sites that set the player's anti-adblock option (flashvar protect_block) test two image
+! requests about 2 s after the player starts: event_reporting2 (a get_file/ URL) and a bait
+! <player dir>/stats.php?... The EasyPrivacy rule `/player/stats.php?` blocks the bait while
+! get_file loads, which the player reads as an ad blocker. A few seconds into the video it then
+! removes the video, shows its "AdBlocker Detected" notice and exits fullscreen; on iPhone this
+! looks like the player reloading.
+!
+! Evidence (2026-10-29): the KVS 7.x player and archived 6.2.0 builds, run in macOS WebKit with
+! an iPhone user agent and the shipped rule files, on a local fixture page carrying a KVS site's
+! player options. With the Privacy rules the player is torn down; bisecting them leaves
+! `/player/stats.php?` as the only trigger. With these two exceptions compiled into the same list,
+! the bait loads, the player does not report an ad blocker, and fullscreen holds. The Ads rules
+! never trigger it (the pre-roll VAST is blocked and the video plays). Control: the 5.5.1 build
+! has no stats.php bait (its check is an iframe only) and is not affected either way.
+!
+! Still blocked: the player's own statistics hits wherever the site's event_reporting URL carries
+! a parameter after embed=0 (device_type=... or video_id=..., as on every KVS site observed), and
+! every other stats.php request. On a site whose event_reporting were a bare stats.php?embed=0,
+! the hits without a label would have the bait's shape and pass too: a WebKit url-filter cannot
+! tell them apart.
+!
+! KVS 6.4+ / 7.x bait: stats.php?embed=0&event=<6-15 random letters>,&rnd=<timestamp>
+@@/^[^?]*\/player\/stats\.php\?embed=0&event=[A-Za-z]+,&rnd=\d+$/$image
+! KVS 6.0-6.2 bait: stats.php?event=Init,  (5.x checks only an iframe; nothing to except)
+@@/player/stats.php?event=Init,|$image
